@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlCardInfo = new System.Windows.Forms.Panel();
+            this.pnlStartAgain = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnBuyAgain = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.cboYear = new System.Windows.Forms.ComboBox();
@@ -46,19 +51,13 @@
             this.btnTryAgainYes = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pnlStartAgain = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnBuyAgain = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlCardInfo.SuspendLayout();
-            this.pnlPaymentFailed.SuspendLayout();
             this.pnlStartAgain.SuspendLayout();
+            this.pnlPaymentFailed.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCardInfo
             // 
-            this.pnlCardInfo.Controls.Add(this.pnlStartAgain);
             this.pnlCardInfo.Controls.Add(this.btnCancel);
             this.pnlCardInfo.Controls.Add(this.btnConfirm);
             this.pnlCardInfo.Controls.Add(this.cboYear);
@@ -75,6 +74,64 @@
             this.pnlCardInfo.Name = "pnlCardInfo";
             this.pnlCardInfo.Size = new System.Drawing.Size(1062, 835);
             this.pnlCardInfo.TabIndex = 0;
+            // 
+            // pnlStartAgain
+            // 
+            this.pnlStartAgain.Controls.Add(this.btnLogout);
+            this.pnlStartAgain.Controls.Add(this.btnBuyAgain);
+            this.pnlStartAgain.Controls.Add(this.label7);
+            this.pnlStartAgain.Controls.Add(this.label6);
+            this.pnlStartAgain.Location = new System.Drawing.Point(293, 12);
+            this.pnlStartAgain.Name = "pnlStartAgain";
+            this.pnlStartAgain.Size = new System.Drawing.Size(1059, 832);
+            this.pnlStartAgain.TabIndex = 1;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.Location = new System.Drawing.Point(160, 647);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(331, 93);
+            this.btnLogout.TabIndex = 53;
+            this.btnLogout.Text = "No";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnBuyAgain
+            // 
+            this.btnBuyAgain.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnBuyAgain.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.btnBuyAgain.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBuyAgain.Location = new System.Drawing.Point(567, 647);
+            this.btnBuyAgain.Name = "btnBuyAgain";
+            this.btnBuyAgain.Size = new System.Drawing.Size(322, 93);
+            this.btnBuyAgain.TabIndex = 52;
+            this.btnBuyAgain.Text = "Yes";
+            this.btnBuyAgain.UseVisualStyleBackColor = false;
+            this.btnBuyAgain.Click += new System.EventHandler(this.btnBuyAgain_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(140, 391);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(764, 172);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Do you want to purchase\r\n another destination ?";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(195, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(628, 86);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Payment Completed";
             // 
             // btnCancel
             // 
@@ -206,7 +263,7 @@
             this.pnlPaymentFailed.Controls.Add(this.btnTryAgainYes);
             this.pnlPaymentFailed.Controls.Add(this.label8);
             this.pnlPaymentFailed.Controls.Add(this.label9);
-            this.pnlPaymentFailed.Location = new System.Drawing.Point(296, 9);
+            this.pnlPaymentFailed.Location = new System.Drawing.Point(293, 9);
             this.pnlPaymentFailed.Name = "pnlPaymentFailed";
             this.pnlPaymentFailed.Size = new System.Drawing.Size(1059, 832);
             this.pnlPaymentFailed.TabIndex = 2;
@@ -258,64 +315,6 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Payment Failed";
             // 
-            // pnlStartAgain
-            // 
-            this.pnlStartAgain.Controls.Add(this.btnLogout);
-            this.pnlStartAgain.Controls.Add(this.btnBuyAgain);
-            this.pnlStartAgain.Controls.Add(this.label7);
-            this.pnlStartAgain.Controls.Add(this.label6);
-            this.pnlStartAgain.Location = new System.Drawing.Point(3, 0);
-            this.pnlStartAgain.Name = "pnlStartAgain";
-            this.pnlStartAgain.Size = new System.Drawing.Size(1059, 832);
-            this.pnlStartAgain.TabIndex = 1;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnLogout.Location = new System.Drawing.Point(160, 647);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(331, 93);
-            this.btnLogout.TabIndex = 53;
-            this.btnLogout.Text = "No";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnBuyAgain
-            // 
-            this.btnBuyAgain.BackColor = System.Drawing.Color.Fuchsia;
-            this.btnBuyAgain.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnBuyAgain.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnBuyAgain.Location = new System.Drawing.Point(567, 647);
-            this.btnBuyAgain.Name = "btnBuyAgain";
-            this.btnBuyAgain.Size = new System.Drawing.Size(322, 93);
-            this.btnBuyAgain.TabIndex = 52;
-            this.btnBuyAgain.Text = "Yes";
-            this.btnBuyAgain.UseVisualStyleBackColor = false;
-            this.btnBuyAgain.Click += new System.EventHandler(this.btnBuyAgain_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(140, 391);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(764, 172);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Do you want to purchase\r\n another destination ?";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(195, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(628, 86);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Payment Completed";
-            // 
             // CreditCardPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -323,6 +322,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1606, 877);
             this.Controls.Add(this.pnlPaymentFailed);
+            this.Controls.Add(this.pnlStartAgain);
             this.Controls.Add(this.pnlCardInfo);
             this.Name = "CreditCardPayment";
             this.Text = "CreditCardPayment";
@@ -330,10 +330,10 @@
             this.Load += new System.EventHandler(this.CreditCardPayment_Load);
             this.pnlCardInfo.ResumeLayout(false);
             this.pnlCardInfo.PerformLayout();
-            this.pnlPaymentFailed.ResumeLayout(false);
-            this.pnlPaymentFailed.PerformLayout();
             this.pnlStartAgain.ResumeLayout(false);
             this.pnlStartAgain.PerformLayout();
+            this.pnlPaymentFailed.ResumeLayout(false);
+            this.pnlPaymentFailed.PerformLayout();
             this.ResumeLayout(false);
 
         }
