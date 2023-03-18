@@ -369,6 +369,7 @@
             this.qrCode.Size = new System.Drawing.Size(256, 256);
             this.qrCode.TabIndex = 36;
             this.qrCode.TabStop = false;
+            this.qrCode.Click += new System.EventHandler(this.qrCode_Click);
             // 
             // creditCard
             // 

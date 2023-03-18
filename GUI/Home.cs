@@ -190,5 +190,14 @@ namespace GUI
             creditCard = null;
             this.Show();
         }
+
+        private void qrCode_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OnlinePayment onlinePayment = new OnlinePayment(this, ticketAmount);
+            onlinePayment.ShowDialog();
+            onlinePayment = null;
+            this.Show();
+        }
     }
 }

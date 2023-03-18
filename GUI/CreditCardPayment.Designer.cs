@@ -58,6 +58,7 @@
             // 
             // pnlCardInfo
             // 
+            this.pnlCardInfo.Controls.Add(this.pnlStartAgain);
             this.pnlCardInfo.Controls.Add(this.btnCancel);
             this.pnlCardInfo.Controls.Add(this.btnConfirm);
             this.pnlCardInfo.Controls.Add(this.cboYear);
@@ -84,6 +85,7 @@
             this.btnCancel.TabIndex = 51;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnConfirm
             // 
@@ -204,7 +206,7 @@
             this.pnlPaymentFailed.Controls.Add(this.btnTryAgainYes);
             this.pnlPaymentFailed.Controls.Add(this.label8);
             this.pnlPaymentFailed.Controls.Add(this.label9);
-            this.pnlPaymentFailed.Location = new System.Drawing.Point(290, 9);
+            this.pnlPaymentFailed.Location = new System.Drawing.Point(296, 9);
             this.pnlPaymentFailed.Name = "pnlPaymentFailed";
             this.pnlPaymentFailed.Size = new System.Drawing.Size(1059, 832);
             this.pnlPaymentFailed.TabIndex = 2;
@@ -262,7 +264,7 @@
             this.pnlStartAgain.Controls.Add(this.btnBuyAgain);
             this.pnlStartAgain.Controls.Add(this.label7);
             this.pnlStartAgain.Controls.Add(this.label6);
-            this.pnlStartAgain.Location = new System.Drawing.Point(290, 12);
+            this.pnlStartAgain.Location = new System.Drawing.Point(3, 0);
             this.pnlStartAgain.Name = "pnlStartAgain";
             this.pnlStartAgain.Size = new System.Drawing.Size(1059, 832);
             this.pnlStartAgain.TabIndex = 1;
@@ -321,7 +323,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1606, 877);
             this.Controls.Add(this.pnlPaymentFailed);
-            this.Controls.Add(this.pnlStartAgain);
             this.Controls.Add(this.pnlCardInfo);
             this.Name = "CreditCardPayment";
             this.Text = "CreditCardPayment";

@@ -46,14 +46,12 @@ namespace GUI
                 bool isValid = CreditCardBLL.Instance.CheckCard(cardNum, expMonth, expYear, securityCode, totalPrice);
                 if (isValid)
                 {
-                    Debug.WriteLine("Yes");
                     TicketBLL.Instance.CreateTicket(DestinationBLL.Instance.GetCurrentDestId(), UserBLL.Instance.GetCurrentUserId(), totalPrice);
                     index = 1;
                     ChangeVisibility(index);
                 }
                 else
                 {
-                    Debug.WriteLine("No");
                     index = 2;
                     ChangeVisibility(index);
                 }
